@@ -1,0 +1,63 @@
+# .NET Core build and project files
+[Bb]in/
+[Oo]bj/
+[Bb]uild/
+[Bb]uildOutput/
+
+# NuGet Packages directory
+.nuget/
+packages/
+
+# Do not include the .nuget folder in your repository
+**/[Nn]uget.exe
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Exclude built Visual Studio extensions
+*.vsix
+
+# Ignore .user and .suo files
+*.user
+*.suo
+
+# Local history for Visual Studio Code
+.history/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+[Tt]humbs.db
+
+# Ignore the local launch settings for VS Code
+.vscode/launch.json
+.vscode/tasks.json
+# But DO keep the important ones for project build configuration.
+# You can comment this out if you want to share your launch settings with the team.
+#!.vscode/launch.json
+#!.vscode/tasks.json
+
+# Ignore local user settings for VS Code
+.vscode/settings.json
+
+# Ignore the local workspace file for VS Code
+*.code-workspace
+
+# Ignore Roslyn cache directories
+*.vs/
+
+# Azure Functions
+azure-functions-cli/
+func.exe
+
+# Backup folders
+_ReSharper.*/
+nbproject/
+
+# Ionide (cross-platform F# VS Code tools) produces .ionide directory
+.ionide/
