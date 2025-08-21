@@ -1,1 +1,15 @@
-GET  http://localhost:5237/
+GET  http://localhost:5237/todos/
+
+###
+
+GET http://localhost:5237/todos/2
+
+POST http://localhost:5237/todos
+content-type: application/json
+
+{
+  "id": 2,
+  "name": "Sample second Todo",
+  "dueDate": "2023-10-01",
+  "isComplete": false
+}
