@@ -1,7 +1,12 @@
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Rewrite;
+
 
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
+
+// Middleware to redirect from /tasks to /todos
+app.UseRewriter(new RewriteOptions().AddRedirect("tasks/(.*)", "todos/$1"));
 
 var todos = new List<Todo>();
 app.MapGet("/todos", () =>todos);

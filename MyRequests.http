@@ -3,6 +3,7 @@ GET  http://localhost:5237/todos/
 ###
 
 GET http://localhost:5237/todos/2
+###
 
 POST http://localhost:5237/todos
 content-type: application/json
@@ -13,3 +14,9 @@ content-type: application/json
   "dueDate": "2023-10-01",
   "isComplete": false
 }
+
+###
+DELETE http://localhost:5237/todos/2
+
+### redirect to GET request todo by id
+GET  http://localhost:5237/tasks/2
