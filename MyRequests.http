@@ -9,14 +9,14 @@ POST http://localhost:5237/todos
 content-type: application/json
 
 {
-  "id": 2,
-  "name": "Sample second Todo",
-  "dueDate": "2023-10-01",
+  "id": 1,
+  "name": "Sample 2 Todo",
+  "dueDate": "2025-10-01",
   "isComplete": false
 }
 
 ###
-DELETE http://localhost:5237/todos/2
+DELETE http://localhost:5237/todos/1
 
 ### redirect to GET request todo by id
 GET  http://localhost:5237/tasks/2
