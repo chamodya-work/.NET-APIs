@@ -8,6 +8,15 @@ var app = builder.Build();
 // Middleware to redirect from /tasks to /todos
 app.UseRewriter(new RewriteOptions().AddRedirect("tasks/(.*)", "todos/$1"));
 
+// Custom middleware to log request details
+app.Use(async (context, next) => {
+    Console.WriteLine($"[{context.Request.Method} {context.Request.Path} {DateTime.UtcNow}] Started.");
+    
+    await next(context);
+    
+    Console.WriteLine($"[{context.Request.Method} {context.Request.Path} {DateTime.UtcNow}] Finished.");
+});
+
 var todos = new List<Todo>();
 app.MapGet("/todos", () =>todos);
 app.MapGet("/", () => "Welcome to the Todo API!");
